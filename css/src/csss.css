@@ -1,0 +1,27 @@
+h1{
+    font-family: "Times New Roman";
+    color: black;
+    line-height: 5px;
+}
+p{
+    font-family: Arial;
+    text-align: inherit;
+}
+.bluetext{
+    color: #1c268b;
+    font-weight: 400;
+}
+
+.text123{
+    text-indent: 40px;
+}
+
+.boldtext{
+    font-weight: bold;
+}
+.cyantext{
+    color: dodgerblue;
+}
+.smallcap{
+    font-variant: small-caps;
+}
