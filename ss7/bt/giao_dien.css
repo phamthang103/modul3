@@ -1,0 +1,57 @@
+#head{
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 3px;
+    position: fixed;
+    background-color: white;
+    border-bottom: solid 2px lavender ;
+    z-index: 10;
+}
+
+#head img{
+    width: 53px;
+    height: 53px;
+    margin-left: 13px;
+}
+
+#head ul li,#head img{
+    float: left;
+    display: inline;
+}
+
+#head ul li{
+    margin-left: 65px;
+    position: relative;
+    left: 32%;
+}
+
+#left{
+    width: 32%;
+    float: left;
+    height: 1200px;
+    background-color: gainsboro;
+    position: fixed;
+    left: 0;
+    top: 62px;
+}
+
+#center{
+    width: 37%;
+    float: left;
+    min-height: 1200px;
+    background-color: white;
+    position: relative;
+    left: 32%;
+    top: 55px;
+}
+
+#right{
+    width: 31%;
+    float: left;
+    height: 1200px;
+    background-color: gainsboro;
+    left: 69%;
+    position: fixed;
+    top: 62px;
+}
