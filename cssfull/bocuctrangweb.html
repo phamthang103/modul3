@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    body{
+        font-family: Arial;
+    }
+    #menu{
+        height: 30px;
+        padding: 0px;
+        margin: 0px;
+
+    }
+    #menu ul, #menu li{
+        padding:0;
+        margin:0;
+    }
+    #menu li{
+        position: relative;
+        float: left;
+        list-style: none;
+        margin: 0;
+        padding:0;
+    }
+    #menu li a{
+        width: 100px;
+        height: 30px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        line-height: 30px;
+        background-color: black;
+        color: white;
+    }
+    #menu li a:hover{
+        background-color: red;
+    }
+    #menu ul ul{
+        position: absolute;
+        top: 30px;
+        visibility: hidden;
+    }
+    #menu ul li:hover ul{
+        visibility: initial;
+    }
+
+</style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="#">Sem1</a>
+            <ul>
+                <li><a href="#">Computer</a></li>
+                <li><a href="#">C</a></li>
+                <li><a href="#">Buinding</a></li>
+                <li><a href="#">Ms</a></li>
+                <li><a href="#">Project</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Sem2</a>
+            <ul>
+                <li><a href="#">Cloud</a></li>
+                <li><a href="#">I</a></li>
+                <li><a href="#">II</a></li>
+                <li><a href="#">III</a></li>
+                <li><a href="#">IV</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Sem3</a></li>
+        <li><a href="#">Sem2</a></li>
+    </ul>
+</div>
+</body>
+</html>

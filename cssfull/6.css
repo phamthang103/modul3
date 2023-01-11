@@ -1,0 +1,66 @@
+div {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-size: 50px;
+    letter-spacing: -5px;
+}
+
+span {
+    position: relative;
+    animation: smoke 10s ease infinite;
+    display: inline-block;
+    transition: 2s ease-in-out;
+}
+
+.s1 {
+    animation-delay: 0;
+}
+
+.s2 {
+    animation-delay: 0.5s;
+}
+
+.s3 {
+    animation-delay: 1s;
+}
+
+.s4 {
+    animation-delay: 1.5s;
+}
+
+.s5 {
+    animation-delay: 2s;
+}
+
+@keyframes smoke {
+    0% {
+        transform: translate(0, 0) scale(1, 1) rotate(0deg);
+        filter: blur(0);
+    }
+    20% {
+        filter: blur(5px);
+        text-shadow: 5px 10px;
+    }
+    40% {
+        filter: blur(35px);
+        text-shadow: 15px 20px;
+    }
+    60% {
+        filter: blur(55px);
+        text-shadow: 25px 30px;
+    }
+    80% {
+        filter: blur(75px);
+        text-shadow: 35px 40px;
+    }
+    100% {
+        transform: translate(-70px, -300px) scale(2, 4) rotate(360deg);
+        filter: blur(100px);
+        text-shadow: 45px 50px;
+    }
+}
