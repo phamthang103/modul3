@@ -2,44 +2,53 @@
 <%--
   Created by IntelliJ IDEA.
   User: ADMIN
-  Date: 2/12/2023
-  Time: 2:21 PM
+  Date: 2/13/2023
+  Time: 8:30 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Product List</title>
+    <title>Product Manager</title>
+    <style>
+        .table{
+            background:#1b1e21;
+        }
+    </style>
 </head>
-<body>
-<h1>Product</h1>
-<p>
-    <a href="products?action=create">Create new product</a>
-</p>
-<table border="1">
-    <tr>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Price</td>
-        <td>Description</td>
-        <td>Manufacture</td>
-        <td>Edit</td>
-        <td>Delete</td>
-    </tr>
-    <c:forEach items="${products}" var="product">
-<tr>
-    <td>${product.getId()}</td>
-    <td>${product.productName}</td>
-    <td>${product.productPrice}</td>
-    <td>${product.productDescription}</td>
-    <td>${product.productNanufacture}</td>
-    <td><a href="/products?action=edit&id=${product.getId}">Edit</a></td>
-    <td><a href="/products?action=delete&id=${product.getId}">Delete</a></td>
-</tr>
-    </c:forEach>
-    <tr>
-        <a href="products?action=search">Search </a>
-    </tr>
-</table>
+<body class="table">
+<h1 style="text-align: center">Product </h1>
+<h2 style="text-align: center">
+    <a href="create.jsp">Add New Product</a>
+    <a href="list.jsp">List All Product</a>
+</h2>
+<div style="text-align: center">
+    <table border="1" cellpadding="5">
+        <caption><h2>List of Product</h2></caption>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Description</td>
+            <td>Manufacture</td>
+            <td>Action</td>
+
+        </tr>
+        <c:forEach var="products" items="${productList}">
+            <tr>
+                <td><c:out value="${products.getId()}"></c:out></td>
+                <td><c:out value="${products.getProductName()}"></c:out></td>
+                <td><c:out value="${products.getProductPrice ()}"></c:out></td>
+                <td><c:out value="${products.getProductDescription ()}"></c:out></td>
+                <td><c:out value="${products.getProductManufacture()}"></c:out></td>
+                <td>
+                    <a href="edit?id=<c:out value='${products.getId()}'/>"> Edit</a>
+                    <a href="delete?id=<c:out value='${products.getId()}'/>"> Delete</a>
+                </td>
+            </tr>
+        </c:forEach>
+
+    </table>
+</div>
 </body>
 </html>
